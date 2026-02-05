@@ -1,0 +1,35 @@
+public class ClassAverageCalculate {
+    public static void main(String[] args) {
+        //Takes two double score       
+        double avg1 = calculateClassAverage(80.0, 90.0);
+        System.out.println("Average (2 scores): " + avg1);
+
+        //Takes three double scores 
+        double avg2 = calculateClassAverage(80.0, 90.0, 70.0);
+        System.out.println("Average (3 scores): " + avg2);
+
+        //Takes array of double scores
+        double[] scores = {80.0, 90.0, 70.0, 85.0};
+        double avg3 = calculateClassAverage(scores);
+        System.out.println("Average (array): " + avg3);
+    }
+
+    //Take two double scores 
+    public static double calculateClassAverage(double score1, double score2) {
+        return (score1 + score2) / 2.0;
+    }
+
+    //Take three double scores
+    public static double calculateClassAverage(double score1, double score2, double score3) {
+        return (score1 + score2 + score3) / 3.0;
+    }
+
+    //Take an array of double scores 
+    public static double calculateClassAverage(double[] scores) {
+        double sum = 0;
+        for (double score : scores) {
+            sum += score;
+        }
+        return sum / scores.length;
+    }
+}
